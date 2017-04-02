@@ -17,12 +17,16 @@ limitations under the License.
 package main
 
 import (
+	"fmt"
 	"os"
+	"time"
 
 	"k8s.io/kubernetes/cmd/kubectl/app"
 )
 
 func main() {
+	fmt.Println("Hello, Kubectl!")
+	fmt.Println(time.Now().Format("2006-01-02 15:04:05"))
 	if err := app.Run(); err != nil {
 		os.Exit(1)
 	}
